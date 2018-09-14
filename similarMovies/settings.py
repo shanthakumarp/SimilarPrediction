@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY') #'+i_1@_m^xbd=93vqpp!1(7$)v4-*vu4)3$3q0a1$kl_1kz#dz^'
+SECRET_KEY = '+i_1@_m^xbd=93vqpp!1(7$)v4-*vu4)3$3q0a1$kl_1kz#dz^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'similarMovies.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-DEBUG = config('DEBUG', default=False, cast=bool)
+#DEBUG = config('DEBUG', default=False, cast=bool)
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL')
+        default='postgres://ndrpjmflylflen:53e841f9c1253532da090a1ce092e21823f6328812acf80635e7c15e4cdcc5cb@ec2-23-23-253-106.compute-1.amazonaws.com:5432/daqet97j6cp7q5'
     )
 }
 
