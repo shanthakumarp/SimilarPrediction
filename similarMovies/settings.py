@@ -79,20 +79,20 @@ WSGI_APPLICATION = 'similarMovies.wsgi.application'
 #DEBUG = config('DEBUG', default=False, cast=bool)
 import dj_database_url
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgres://ndrpjmflylflen:53e841f9c1253532da090a1ce092e21823f6328812acf80635e7c15e4cdcc5cb@ec2-23-23-253-106.compute-1.amazonaws.com:5432/daqet97j6cp7q5'
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://ndrpjmflylflen:53e841f9c1253532da090a1ce092e21823f6328812acf80635e7c15e4cdcc5cb@ec2-23-23-253-106.compute-1.amazonaws.com:5432/daqet97j6cp7q5'
+    )
+}
 
 #from DB_settings import *
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
