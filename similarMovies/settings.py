@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+#PROJECT_ROOT
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -122,7 +123,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 import datetime
 JWT_AUTH = {
@@ -132,3 +137,5 @@ JWT_AUTH = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 SOURCE_FILE =  os.path.join(BASE_DIR, 'SourceMoviesData.csv')
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
